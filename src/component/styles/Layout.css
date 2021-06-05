@@ -1,0 +1,10 @@
+.Layout {
+    background: black;
+}
+
+.Layout-head {
+    /*background: crimson;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
