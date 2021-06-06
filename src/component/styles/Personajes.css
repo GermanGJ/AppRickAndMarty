@@ -1,0 +1,70 @@
+@font-face {
+    font-family: schwifty;
+    src: url("./get_schwifty.ttf");
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url("./OpenSans-Light.ttf");
+}
+
+
+
+.Characters {
+   align-content: center;
+   background: black;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.Character-Card {
+    /*background: #deeeea;*/
+    background: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.Card {
+    display: flex;
+}
+
+.Card-Header {
+
+}
+
+.Card-Img {
+    border-radius: 5px;
+}
+
+.Card-Body {
+    width: 300px;
+}
+
+.Card-Title {
+    font-family: schwifty;
+    color: #04b2c9;
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Card-Resumen {
+    background: #bf1363;
+    font-family: OpenSans, 'Times New Roman', Times, serif;
+    color: #deeeea;
+    font-size: 1em;
+    margin-left: 10px;;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 4px;
+}
+
+.Card-Resumen div {
+    margin-left: 5px;
+    margin-right: 5px;
+}
