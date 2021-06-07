@@ -1,143 +1,20 @@
 import React from 'react';
 
 import Character from './Character';
+import Loader from './Loader';
 
-
-//Personajes
 import './styles/Personajes.css';
 
 
 class Characters extends React.Component {
 
     state = {
-        "data": {
-            "results": [
-                {
-                    "id": 1,
-                    "name": "Rick Sanchez",
-                    "status": "Alive",
-                    "species": "Human",
-                    "type": "",
-                    "gender": "Male",
-                    "origin": {
-                        "name": "Earth (C-137)",
-                        "url": "https://rickandmortyapi.com/api/location/1"
-                    },
-                    "location": {
-                        "name": "Earth (Replacement Dimension)",
-                        "url": "https://rickandmortyapi.com/api/location/20"
-                    },
-                    "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-                    "episode": [
-                        "https://rickandmortyapi.com/api/episode/1",
-                        "https://rickandmortyapi.com/api/episode/2",
-                        "https://rickandmortyapi.com/api/episode/3",
-                        "https://rickandmortyapi.com/api/episode/4",
-                        "https://rickandmortyapi.com/api/episode/5",
-                        "https://rickandmortyapi.com/api/episode/6",
-                        "https://rickandmortyapi.com/api/episode/7",
-                        "https://rickandmortyapi.com/api/episode/8",
-                        "https://rickandmortyapi.com/api/episode/9",
-                        "https://rickandmortyapi.com/api/episode/10",
-                        "https://rickandmortyapi.com/api/episode/11",
-                        "https://rickandmortyapi.com/api/episode/12",
-                        "https://rickandmortyapi.com/api/episode/13",
-                        "https://rickandmortyapi.com/api/episode/14",
-                        "https://rickandmortyapi.com/api/episode/15",
-                        "https://rickandmortyapi.com/api/episode/16",
-                        "https://rickandmortyapi.com/api/episode/17",
-                        "https://rickandmortyapi.com/api/episode/18",
-                        "https://rickandmortyapi.com/api/episode/19",
-                        "https://rickandmortyapi.com/api/episode/20",
-                        "https://rickandmortyapi.com/api/episode/21",
-                        "https://rickandmortyapi.com/api/episode/22",
-                        "https://rickandmortyapi.com/api/episode/23",
-                        "https://rickandmortyapi.com/api/episode/24",
-                        "https://rickandmortyapi.com/api/episode/25",
-                        "https://rickandmortyapi.com/api/episode/26",
-                        "https://rickandmortyapi.com/api/episode/27",
-                        "https://rickandmortyapi.com/api/episode/28",
-                        "https://rickandmortyapi.com/api/episode/29",
-                        "https://rickandmortyapi.com/api/episode/30",
-                        "https://rickandmortyapi.com/api/episode/31",
-                        "https://rickandmortyapi.com/api/episode/32",
-                        "https://rickandmortyapi.com/api/episode/33",
-                        "https://rickandmortyapi.com/api/episode/34",
-                        "https://rickandmortyapi.com/api/episode/35",
-                        "https://rickandmortyapi.com/api/episode/36",
-                        "https://rickandmortyapi.com/api/episode/37",
-                        "https://rickandmortyapi.com/api/episode/38",
-                        "https://rickandmortyapi.com/api/episode/39",
-                        "https://rickandmortyapi.com/api/episode/40",
-                        "https://rickandmortyapi.com/api/episode/41"
-                    ],
-                    "url": "https://rickandmortyapi.com/api/character/1",
-                    "created": "2017-11-04T18:48:46.250Z"
-                },
-                {
-                    "id": 2,
-                    "name": "Morty Smith",
-                    "status": "Alive",
-                    "species": "Human",
-                    "type": "",
-                    "gender": "Male",
-                    "origin": {
-                        "name": "Earth (C-137)",
-                        "url": "https://rickandmortyapi.com/api/location/1"
-                    },
-                    "location": {
-                        "name": "Earth (Replacement Dimension)",
-                        "url": "https://rickandmortyapi.com/api/location/20"
-                    },
-                    "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
-                    "episode": [
-                        "https://rickandmortyapi.com/api/episode/1",
-                        "https://rickandmortyapi.com/api/episode/2",
-                        "https://rickandmortyapi.com/api/episode/3",
-                        "https://rickandmortyapi.com/api/episode/4",
-                        "https://rickandmortyapi.com/api/episode/5",
-                        "https://rickandmortyapi.com/api/episode/6",
-                        "https://rickandmortyapi.com/api/episode/7",
-                        "https://rickandmortyapi.com/api/episode/8",
-                        "https://rickandmortyapi.com/api/episode/9",
-                        "https://rickandmortyapi.com/api/episode/10",
-                        "https://rickandmortyapi.com/api/episode/11",
-                        "https://rickandmortyapi.com/api/episode/12",
-                        "https://rickandmortyapi.com/api/episode/13",
-                        "https://rickandmortyapi.com/api/episode/14",
-                        "https://rickandmortyapi.com/api/episode/15",
-                        "https://rickandmortyapi.com/api/episode/16",
-                        "https://rickandmortyapi.com/api/episode/17",
-                        "https://rickandmortyapi.com/api/episode/18",
-                        "https://rickandmortyapi.com/api/episode/19",
-                        "https://rickandmortyapi.com/api/episode/20",
-                        "https://rickandmortyapi.com/api/episode/21",
-                        "https://rickandmortyapi.com/api/episode/22",
-                        "https://rickandmortyapi.com/api/episode/23",
-                        "https://rickandmortyapi.com/api/episode/24",
-                        "https://rickandmortyapi.com/api/episode/25",
-                        "https://rickandmortyapi.com/api/episode/26",
-                        "https://rickandmortyapi.com/api/episode/27",
-                        "https://rickandmortyapi.com/api/episode/28",
-                        "https://rickandmortyapi.com/api/episode/29",
-                        "https://rickandmortyapi.com/api/episode/30",
-                        "https://rickandmortyapi.com/api/episode/31",
-                        "https://rickandmortyapi.com/api/episode/32",
-                        "https://rickandmortyapi.com/api/episode/33",
-                        "https://rickandmortyapi.com/api/episode/34",
-                        "https://rickandmortyapi.com/api/episode/35",
-                        "https://rickandmortyapi.com/api/episode/36",
-                        "https://rickandmortyapi.com/api/episode/37",
-                        "https://rickandmortyapi.com/api/episode/38",
-                        "https://rickandmortyapi.com/api/episode/39",
-                        "https://rickandmortyapi.com/api/episode/40",
-                        "https://rickandmortyapi.com/api/episode/41"
-                    ],
-                    "url": "https://rickandmortyapi.com/api/character/2",
-                    "created": "2017-11-04T18:50:21.651Z"
-                },
-            ],
-        },
+        nextPage: 1,
+        loading: true,
+        error: null,
+        data: {
+            results: [],
+        }
     };
 
     componentDidMount() {
@@ -145,13 +22,28 @@ class Characters extends React.Component {
     }
 
     fetchCharacters = async () => {
-
-        await fetch("https://rickandmortyapi.com/api/character")
-          .then(response => response.json())
-          .then(data => this.setState({data: data}))
+        this.setState({ loading: true, error: null });
+        try {
+            await fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.nextPage}`)
+                .then(response => response.json())
+                .then(data => this.setState({loading: false, 
+                                                data: {
+                                                    info: data.info,
+                                                    results: [].concat(this.state.data.results, data.results)
+                                                },
+                                                nextPage: this.state.nextPage + 1,
+                                            }));
+        }
+        catch (error){
+            this.setState({loading: false, error: error});
+        }
     }
 
     render() {
+
+        if (this.props.error) {
+            return `Error: ${this.props.error.message}`;
+        }
 
         if (this.state.data.results.length === 0) {
             return (
@@ -172,6 +64,23 @@ class Characters extends React.Component {
                                 </div>
                             );
                         })
+                    }
+                </div>
+                
+                <div>
+                    {
+                        this.state.loading && (
+                            <div>
+                                <Loader></Loader>
+                            </div>    
+                        )
+                    }
+                </div>
+
+                <div className="Grupo-Boton" >
+                    {!this.state.loading && (
+                            <button className="Grupo-Boton__Full" onClick={() => this.fetchCharacters()} >Cargar 20 Personajes Mas....</button>
+                        )
                     }
                 </div>
             </div>

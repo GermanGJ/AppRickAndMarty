@@ -8,7 +8,9 @@
     src: url("./OpenSans-Light.ttf");
 }
 
-
+* {
+    background: black;
+}
 
 .Characters {
    align-content: center;
@@ -16,6 +18,8 @@
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   margin-right: 10%;
+   margin-left: 10%;
 }
 
 .Character-Card {
@@ -29,6 +33,9 @@
 
 .Card {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 .Card-Header {
@@ -36,7 +43,6 @@
 }
 
 .Card-Img {
-    border-radius: 5px;
 }
 
 .Card-Body {
@@ -59,12 +65,44 @@
     margin-left: 10px;;
     display: flex;
     justify-content: space-between;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
     border-radius: 4px;
 }
 
 .Card-Resumen div {
+    background: #bf1363;
     margin-left: 5px;
     margin-right: 5px;
+    align-content: center;
+    text-align: center;
 }
+
+
+.Grupo-Boton {
+    /*background: crimson;*/
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.Grupo-Boton__Full {
+    height: 100%;
+    width: 100%;
+    background-color: #04b2c9;
+    border-radius: 4px;
+    border: 2px solid #03256c;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #1768ac;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+  }
